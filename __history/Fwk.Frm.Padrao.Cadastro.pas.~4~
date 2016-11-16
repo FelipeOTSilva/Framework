@@ -1,0 +1,30 @@
+unit Fwk.Frm.Padrao.Cadastro;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Fwk.Frm.Padrao.Base, Data.DB, Vcl.Grids,
+  Vcl.DBGrids, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.ComCtrls, Vcl.DBCtrls;
+
+type
+  TFwkFrmPadraoCadastro = class(TFwkFrmPadraoBase)
+    TabCadastro: TTabSheet;
+    GbEdicao: TGroupBox;
+    DBNavigator1: TDBNavigator;
+    GbRegistro: TGroupBox;
+    BtnFechar: TButton;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FwkFrmPadraoCadastro: TFwkFrmPadraoCadastro;
+
+implementation
+
+{$R *.dfm}
+
+end.

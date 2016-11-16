@@ -5,11 +5,23 @@
     <Transaction>2016/06/16 19:57:41.000.311,=C:\Users\Felipe\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2016/06/16 20:37:23.000.995,=C:\Users\Felipe\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2016/11/16 19:45:13.257,=C:\Users\Felipe\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2016/11/16 19:45:34.144,C:\Framework\Fwk.Frm.Padrao.Principal.dfm=C:\Users\Felipe\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
     <Transaction>2016/11/16 19:45:34.144,C:\Framework\Fwk.Frm.Padrao.Principal.pas=C:\Users\Felipe\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2016/11/16 19:45:34.144,C:\Framework\Fwk.Frm.Padrao.Principal.dfm=C:\Users\Felipe\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
     <Transaction>2016/11/16 19:45:44.880,C:\Framework\Framework.dproj=C:\Users\Felipe\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
     <Transaction>2016/11/16 19:54:17.721,=C:\Framework\Unit1.pas</Transaction>
-    <Transaction>2016/11/16 19:54:26.979,C:\Framework\Fwk.Dm.Padrao.Database.pas=C:\Framework\Unit1.pas</Transaction>
     <Transaction>2016/11/16 19:54:26.979,C:\Framework\Fwk.Dm.Padrao.Database.dfm=C:\Framework\Unit1.dfm</Transaction>
+    <Transaction>2016/11/16 19:54:26.979,C:\Framework\Fwk.Dm.Padrao.Database.pas=C:\Framework\Unit1.pas</Transaction>
+    <Transaction>2016/11/16 20:12:32.079,=C:\Framework\Unit1.pas</Transaction>
+    <Transaction>2016/11/16 20:13:31.203,C:\Framework\Fwk.Dm.Padrao.Dados.dfm=C:\Framework\Unit1.dfm</Transaction>
+    <Transaction>2016/11/16 20:13:31.203,C:\Framework\Fwk.Dm.Padrao.Dados.pas=C:\Framework\Unit1.pas</Transaction>
+    <Transaction>2016/11/16 20:14:28.269,=C:\Framework\Unit1.pas</Transaction>
+    <Transaction>2016/11/16 20:14:44.281,C:\Framework\Fwk.Frm.Padrao.Base.dfm=C:\Framework\Unit1.dfm</Transaction>
+    <Transaction>2016/11/16 20:14:44.281,C:\Framework\Fwk.Frm.Padrao.Base.pas=C:\Framework\Unit1.pas</Transaction>
+    <Transaction>2016/11/16 21:24:32.976,=C:\Framework\Unit1.pas</Transaction>
+    <Transaction>2016/11/16 21:25:28.140,C:\Framework\Fwk.Frm.Padrao.Cadastro.pas=C:\Framework\Unit1.pas</Transaction>
+    <Transaction>2016/11/16 21:25:28.140,C:\Framework\Fwk.Frm.Padrao.Cadastro.dfm=C:\Framework\Unit1.dfm</Transaction>
+    <Transaction>2016/11/16 21:37:12.746,=C:\Framework\Unit1.pas</Transaction>
+    <Transaction>2016/11/16 21:37:20.129,C:\Framework\Fwk.Frm.Padrao.Pesquisa.dfm=C:\Framework\Unit1.dfm</Transaction>
+    <Transaction>2016/11/16 21:37:20.129,C:\Framework\Fwk.Frm.Padrao.Pesquisa.pas=C:\Framework\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

@@ -1,0 +1,38 @@
+unit Fwk.Frm.Padrao.Base;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.StdCtrls, Vcl.ExtCtrls,
+  Vcl.Grids, Vcl.DBGrids, Data.DB, FireDAC.Comp.Client;
+
+type
+  TFwkFrmPadraoBase = class(TForm)
+    PcDados: TPageControl;
+    TabPesquisa: TTabSheet;
+    GbPesquisa: TGroupBox;
+    CmbCampos: TComboBox;
+    LblCampo: TLabel;
+    RgCriterio: TRadioGroup;
+    LblTermo: TLabel;
+    EdtTermo: TEdit;
+    BtnPesquisar: TButton;
+    BtnCancelar: TButton;
+    GbRegistros: TGroupBox;
+    TDBGrid: TDBGrid;
+    DsoRegistros: TDataSource;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FwkFrmPadraoBase: TFwkFrmPadraoBase;
+
+implementation
+
+{$R *.dfm}
+
+end.

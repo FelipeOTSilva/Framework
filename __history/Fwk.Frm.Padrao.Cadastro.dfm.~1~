@@ -1,0 +1,15 @@
+inherited FwkFrmPadraoBase1: TFwkFrmPadraoBase1
+  Caption = 'FwkFrmPadraoBase1'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited PcDados: TPageControl
+    inherited TabPesquisa: TTabSheet
+      ExplicitLeft = 4
+      ExplicitTop = 24
+    end
+    object TabSheet1: TTabSheet
+      Caption = 'TabSheet1'
+      ImageIndex = 1
+    end
+  end
+end

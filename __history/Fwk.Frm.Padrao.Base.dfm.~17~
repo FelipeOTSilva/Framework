@@ -1,0 +1,131 @@
+object FwkFrmPadraoBase: TFwkFrmPadraoBase
+  Left = 0
+  Top = 0
+  Caption = 'Framework - Form Padr'#227'o Base'
+  ClientHeight = 465
+  ClientWidth = 744
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poScreenCenter
+  ShowHint = True
+  PixelsPerInch = 96
+  TextHeight = 13
+  object PcDados: TPageControl
+    Left = 0
+    Top = 0
+    Width = 745
+    Height = 465
+    ActivePage = TabPesquisa
+    TabOrder = 0
+    object TabPesquisa: TTabSheet
+      Caption = 'Pesquisa'
+      ExplicitLeft = 0
+      ExplicitTop = 28
+      object GbPesquisa: TGroupBox
+        Left = 0
+        Top = 3
+        Width = 241
+        Height = 431
+        Caption = 'Informe os Valores de Pesquisa'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clDefault
+        Font.Height = -11
+        Font.Name = 'Tahoma'
+        Font.Style = []
+        ParentFont = False
+        TabOrder = 0
+        object LblCampo: TLabel
+          Left = 19
+          Top = 24
+          Width = 33
+          Height = 13
+          Caption = 'Campo'
+        end
+        object LblTermo: TLabel
+          Left = 19
+          Top = 224
+          Width = 30
+          Height = 13
+          Caption = 'Termo'
+        end
+        object CmbCampos: TComboBox
+          Left = 19
+          Top = 43
+          Width = 174
+          Height = 21
+          Style = csDropDownList
+          TabOrder = 0
+        end
+        object RgCriterio: TRadioGroup
+          Left = 19
+          Top = 88
+          Width = 174
+          Height = 113
+          Caption = 'Criterio'
+          ItemIndex = 0
+          Items.Strings = (
+            'Igual'
+            'Iniciando'
+            'Contendo')
+          TabOrder = 1
+        end
+        object EdtTermo: TEdit
+          Left = 19
+          Top = 243
+          Width = 174
+          Height = 21
+          TabOrder = 2
+        end
+        object BtnPesquisar: TButton
+          Left = 19
+          Top = 296
+          Width = 174
+          Height = 25
+          Caption = 'Pesquisar'
+          TabOrder = 3
+          OnClick = BtnPesquisarClick
+        end
+        object BtnCancelar: TButton
+          Left = 19
+          Top = 327
+          Width = 174
+          Height = 25
+          Caption = 'Cancelar'
+          TabOrder = 4
+          OnClick = BtnCancelarClick
+        end
+      end
+      object GbRegistros: TGroupBox
+        Left = 247
+        Top = 3
+        Width = 487
+        Height = 431
+        Caption = 'Registros'
+        TabOrder = 1
+        object TDBGrid: TDBGrid
+          Left = 3
+          Top = 24
+          Width = 470
+          Height = 404
+          DataSource = DsoRegistros
+          Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
+          TabOrder = 0
+          TitleFont.Charset = DEFAULT_CHARSET
+          TitleFont.Color = clWindowText
+          TitleFont.Height = -11
+          TitleFont.Name = 'Tahoma'
+          TitleFont.Style = []
+        end
+      end
+    end
+  end
+  object DsoRegistros: TDataSource
+    Left = 324
+    Top = 112
+  end
+end

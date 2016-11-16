@@ -90,6 +90,23 @@
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
+        <DCCReference Include="Fwk.Dm.Padrao.Dados.pas">
+            <Form>FwkDmPadraoDados</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="Fwk.Frm.Padrao.Base.pas">
+            <Form>FwkFrmPadraoBase</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Fwk.Frm.Padrao.Cadastro.pas">
+            <Form>FwkFrmPadraoCadastro</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Fwk.Frm.Padrao.Pesquisa.pas">
+            <Form>FwkFrmPadraoPesquisa</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

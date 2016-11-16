@@ -1,0 +1,63 @@
+unit Fwk.Frm.Padrao.Base;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ComCtrls, Vcl.StdCtrls, Vcl.ExtCtrls,
+  Vcl.Grids, Vcl.DBGrids, Data.DB, FireDAC.Comp.Client;
+
+type
+  TFwkFrmPadraoBase = class(TForm)
+    PcDados: TPageControl;
+    TabPesquisa: TTabSheet;
+    GbPesquisa: TGroupBox;
+    CmbCampos: TComboBox;
+    LblCampo: TLabel;
+    RgCriterio: TRadioGroup;
+    LblTermo: TLabel;
+    EdtTermo: TEdit;
+    BtnPesquisar: TButton;
+    BtnCancelar: TButton;
+    GbRegistros: TGroupBox;
+    TDBGrid: TDBGrid;
+    DsoRegistros: TDataSource;
+    procedure BtnPesquisarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FwkFrmPadraoBase: TFwkFrmPadraoBase;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFwkFrmPadraoBase.BtnPesquisarClick(Sender: TObject);
+{Este metodo verifica o campo selecionado no ComboBox
+  e executa um filtro nele baseado nos critérios}
+var
+  vFieldName: string;
+begin
+  TFDQuery(DsoRegistros.DataSet).Filtered := False;
+
+  vFieldName := TField(CmbCampos.Items.Objects[CmbCampos.ItemIndex]).FieldName;
+  case RgCriterio.ItemIndex of
+    0: TFDQuery(DsoRegistros.DataSet).Filter := vFieldName + ' = ' + QuotedStr(EdtTermo.Text); // Igual
+    1: TFDQuery(DsoRegistros.DataSet).Filter := vFieldName + ' Like ' + QuotedStr(EdtTermo.Text + '%'); //Iniciando
+    2: TFDQuery(DsoRegistros.DataSet).Filter := vFieldName + ' Like ' + QuotedStr('%' + EdtTermo.Text + '%');
+  end;
+
+  TFDQuery(DsoRegistros.DataSet).Filtered := True;
+
+  if TFDQuery(DsoRegistros.DataSet).IsEmpty then
+  begin
+    ShowMessage('Nenhum registro foi localizado!');
+    BtnCancelar.Click;
+  end;
+end;
+
+end.

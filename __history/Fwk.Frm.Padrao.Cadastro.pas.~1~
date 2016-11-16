@@ -1,0 +1,26 @@
+unit Fwk.Frm.Padrao.Cadastro;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Fwk.Frm.Padrao.Base, Data.DB, Vcl.Grids,
+  Vcl.DBGrids, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.ComCtrls;
+
+type
+  TFwkFrmPadraoBase1 = class(TFwkFrmPadraoBase)
+    TabSheet1: TTabSheet;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FwkFrmPadraoBase1: TFwkFrmPadraoBase1;
+
+implementation
+
+{$R *.dfm}
+
+end.

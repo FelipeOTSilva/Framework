@@ -1,0 +1,57 @@
+unit Fwk.Dm.Padrao.Database;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.FB,
+  FireDAC.Phys.FBDef, FireDAC.VCLUI.Wait, FireDAC.Comp.UI, FireDAC.Phys.IBBase,
+  Data.DB, FireDAC.Comp.Client, System.IniFiles;
+
+type
+  TFwkDmPadraoDatabase = class(TDataModule)
+    FDConnection: TFDConnection;
+    FDPhysFBDriverLink: TFDPhysFBDriverLink;
+    FDGUIxWaitCursor: TFDGUIxWaitCursor;
+    procedure DataModuleCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FwkDmPadraoDatabase: TFwkDmPadraoDatabase;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+procedure TFwkDmPadraoDatabase.DataModuleCreate(Sender: TObject);
+{Este metodo carrega as informações de conexão com o banco de ddos
+ de um arquivo .ini de configuração que fica na pasta do sistema}
+
+var
+   vIniFile: TIniFile;
+   vDatabaseFileName: string;
+begin
+  FDConnection.Connected := False;
+  vIniFile := TIniFile.Create(ExtractFilePath(ParamStr(0)) + 'Database.Ini');
+  try
+    try
+      vDatabaseFileName := vIniFile.ReadString('Database', 'FileName', '');
+      FDConnection.Params.Values['Database'] := vDatabaseFileName;
+      FDConnection.Connected := True;
+    except
+      on E: Exception do
+        raise Exception.Create('Ocorreu um erro ao conectar ao banco de dados! ' + E.Message);
+    end;
+  finally
+    FreeAndNil(vIniFile);
+  end;
+end;
+
+end.

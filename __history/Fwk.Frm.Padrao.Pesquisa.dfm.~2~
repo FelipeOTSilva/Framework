@@ -1,0 +1,11 @@
+inherited FwkFrmPadraoPesquisa: TFwkFrmPadraoPesquisa
+  Caption = 'Framework - Form Padr'#227'o de Pesquisa'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited PcDados: TPageControl
+    inherited TabPesquisa: TTabSheet
+      ExplicitLeft = 4
+      ExplicitTop = 24
+    end
+  end
+end
