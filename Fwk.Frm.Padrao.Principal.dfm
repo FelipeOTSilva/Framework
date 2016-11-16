@@ -1,7 +1,7 @@
 object FwkFrmPadraoPrincipal: TFwkFrmPadraoPrincipal
   Left = 0
   Top = 0
-  Caption = 'Principal'
+  Caption = 'Form Padr'#227'o Principal'
   ClientHeight = 201
   ClientWidth = 447
   Color = clBtnFace
@@ -11,6 +11,9 @@ object FwkFrmPadraoPrincipal: TFwkFrmPadraoPrincipal
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poDesktopCenter
+  ShowHint = True
+  WindowState = wsMaximized
   PixelsPerInch = 96
   TextHeight = 13
 end
